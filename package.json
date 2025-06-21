@@ -4,19 +4,21 @@
   "description": "A visual component library for building consistent and beautiful user interfaces in React Native apps.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./build/index.d.ts",
+      "import": "./build/index.mjs",
+      "require": "./build/index.js"
+    }
+  },
   "files": [
     "build"
   ],
   "scripts": {
-    "build": "expo-module build",
-    "clean": "expo-module clean",
-    "lint": "expo-module lint",
-    "test": "expo-module test",
-    "prepare": "expo-module prepare",
-    "prepublishOnly": "expo-module prepublishOnly",
-    "expo-module": "expo-module",
-    "open:ios": "xed example/ios",
-    "open:android": "open -a \"Android Studio\" example/android"
+    "clean": "rm -rf build",
+    "build": "tsup",
+    "dev": "tsup src/index.ts --watch",
+    "prepare": "tsup"
   },
   "keywords": [
     "react-native",
@@ -37,7 +39,8 @@
     "expo": "~53.0.0",
     "expo-module-scripts": "^4.1.6",
     "react": "19.0.0",
-    "react-native": "0.79.2"
+    "react-native": "0.79.2",
+    "tsup": "^8.5.0"
   },
   "peerDependencies": {
     "expo": "*",
