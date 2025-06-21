@@ -31,11 +31,7 @@
   "author": "Adilson Gabriel <adilsongb.rabelo@gmail.com> (adilsongb)",
   "license": "MIT",
   "homepage": "https://github.com/adilsongb/chacha-native#readme",
-  "dependencies": {
-    "@react-native-async-storage/async-storage": "2.1.2",
-    "@storybook/react-native": "^9.0.9",
-    "react-native-safe-area-context": "5.4.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/react": "~19.0.0",
     "expo": "~53.0.0",

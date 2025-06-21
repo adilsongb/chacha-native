@@ -1,0 +1,30 @@
+export const ThemeDefault = {
+  color: {
+    primary: "#2B75E5",
+    secondary: "#F6F6F6",
+    background: "#F2F2F2",
+    redAlert: "#F30F00",
+    greenSuccess: "#4BA449",
+    black: "#212121",
+    white: "#FFFFFF",
+    gray: "#8A8894",
+    grayLight: "#C9C8D3",
+    mainBlue: "#2B75E5",
+  },
+  margin: {
+    default: 0,
+    minimum: 4,
+    small: 8,
+    medium: 16,
+    large: 24,
+    extraLarge: 32,
+  },
+  padding: {
+    default: 0,
+    minimum: 4,
+    small: 8,
+    medium: 16,
+    large: 24,
+    extraLarge: 32,
+  },
+};

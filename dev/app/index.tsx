@@ -1,5 +1,5 @@
 import { Text, View } from "react-native";
-import { Button} from "@adilsongb/chacha-native";
+import { Button, Typograph } from "@adilsongb/chacha-native";
 
 export default function StorybookScreen() {
   return (
@@ -10,6 +10,7 @@ export default function StorybookScreen() {
         alignItems: "center",
       }}
     >
+      <Typograph variant="h1">Testando o texto</Typograph>
       <Button title="teste" onPress={() =>{}} />
     </View>
   );
