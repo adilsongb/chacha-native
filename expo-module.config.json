@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android", "web"],
+  "apple": {
+    "modules": ["Chacha NativeModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.chachanative.Chacha NativeModule"]
+  }
+}
