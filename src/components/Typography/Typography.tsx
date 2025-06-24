@@ -1,29 +1,36 @@
-import { ThemeDefault } from "@/theme";
 import { getRestPropsStyle } from "@/theme/style";
 import { Text } from "react-native";
 
-import styles from "./Typography.styles";
-import type { TypographProps } from "./Typography.types";
+import { useStyles } from "./Typography.styles";
+import { useTheme } from "@/theme/context";
+import type { ColorTypes } from "@/theme/types";
+import type {
+  TypographProps,
+  TypographVariantsTypes,
+} from "./Typography.types";
 
 export const Typograph = ({
   children,
-  variant,
-  color = "black",
+  variant = "normal",
+  color = "primary",
   textAlign = "auto",
   ...rest
 }: TypographProps) => {
+  const theme = useTheme();
+  const styles = useStyles(theme);
+
   return (
     <Text
       style={[
-        styles[variant],
+        styles[variant as TypographVariantsTypes],
         {
-          color: ThemeDefault.color[color],
+          color: theme.colors[color as ColorTypes] ?? color,
           textAlign,
-          ...getRestPropsStyle({ ...rest }),
+          ...getRestPropsStyle(theme, { ...rest }),
         },
       ]}
     >
       {children}
     </Text>
   );
-}
+};

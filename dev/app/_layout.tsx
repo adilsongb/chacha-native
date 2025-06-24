@@ -1,13 +1,18 @@
 import { Stack } from "expo-router";
-import { useFonts } from 'expo-font';
-import * as SplashScreen from 'expo-splash-screen';
+import { useFonts } from "expo-font";
+import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
+import { ThemeProvider } from "@adilsongb/chacha-native";
 
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
-    'Sniglet': require('../assets/fonts/Sniglet.ttf'),
+    Sniglet: require("../assets/fonts/Sniglet.ttf"),
+    "Roboto-Regular": require("../assets/fonts/Roboto-Regular.ttf"),
+    "Roboto-Medium": require("../assets/fonts/Roboto-Medium.ttf"),
+    "Roboto-SemiBold": require("../assets/fonts/Roboto-SemiBold.ttf"),
+    "Roboto-Bold": require("../assets/fonts/Roboto-Bold.ttf"),
   });
 
   useEffect(() => {
@@ -20,5 +25,9 @@ export default function RootLayout() {
     return null;
   }
 
-  return <Stack screenOptions={{ headerShown: false }} />;
+  return (
+    <ThemeProvider theme={{}}>
+      <Stack screenOptions={{ headerShown: false }} />
+    </ThemeProvider>
+  );
 }

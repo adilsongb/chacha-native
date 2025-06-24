@@ -33,7 +33,9 @@
   "author": "Adilson Gabriel <adilsongb.rabelo@gmail.com> (adilsongb)",
   "license": "MIT",
   "homepage": "https://github.com/adilsongb/chacha-native#readme",
-  "dependencies": {},
+  "dependencies": {
+    "lottie-react-native": "^7.2.2"
+  },
   "devDependencies": {
     "@types/react": "~19.0.0",
     "expo": "~53.0.0",
