@@ -2,6 +2,7 @@ import { ThemeDefault } from "@/theme";
 
 export type ColorTypes = keyof typeof ThemeDefault.colors;
 export type SpacingTypes = keyof typeof ThemeDefault.spacing;
+export type BorderRadiusTypes = keyof typeof ThemeDefault.borderRadius;
 
 export type BaseElementProps = {
   m?: SpacingTypes | (string & {}) | (number & {});

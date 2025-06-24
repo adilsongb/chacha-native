@@ -1,31 +1,22 @@
-import { StyleSheet } from 'react-native';
+import { createStyles } from "@/theme/createStyles";
 
-export const styles = StyleSheet.create({
+export const useStyles = createStyles((theme) => ({
   container: {
-    padding: 16,
-    borderRadius: 8,
-    alignItems: 'center',
-    justifyContent: 'center',
+    padding: theme.spacing.md,
+    borderRadius: theme.borderRadius.md,
+    alignItems: "center",
+    justifyContent: "center",
+    height: 58,
   },
   primaryContainer: {
-    backgroundColor: '#6200ee',
+    backgroundColor: theme.colors.primary,
   },
   secondaryContainer: {
-    backgroundColor: 'transparent',
-    borderWidth: 1,
-    borderColor: '#6200ee',
-  },
-  text: {
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
-  primaryText: {
-    color: '#fff',
-  },
-  secondaryText: {
-    color: '#6200ee',
+    backgroundColor: "transparent",
+    borderWidth: 2,
+    borderColor: theme.colors.primary,
   },
   disabled: {
     opacity: 0.6,
   },
-});
+}));
