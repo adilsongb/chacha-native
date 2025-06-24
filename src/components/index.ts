@@ -1,2 +1,3 @@
-export * from './Button';
-export * from './Typography';
+export * from "./Button";
+export * from "./StyledView";
+export * from "./Typography";

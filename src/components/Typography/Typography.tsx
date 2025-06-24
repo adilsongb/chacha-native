@@ -26,7 +26,7 @@ export const Typograph = ({
         {
           color: theme.colors[color as ColorTypes] ?? color,
           textAlign,
-          ...getRestPropsStyle(theme, { ...rest }),
+          ...getRestPropsStyle(theme, rest),
         },
       ]}
     >
