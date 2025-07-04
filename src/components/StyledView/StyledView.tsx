@@ -14,6 +14,7 @@ export const StyledView = ({
   disabled,
   bgColor,
   borderRadius,
+  borderColor,
   ...rest
 }: StyledViewProps) => {
   const theme = useTheme();
@@ -22,6 +23,7 @@ export const StyledView = ({
     backgroundColor: theme.colors[bgColor as ColorTypes] ?? bgColor,
     borderRadius:
       theme.borderRadius[borderRadius as BorderRadiusTypes] ?? borderRadius,
+    borderColor: theme.colors[borderColor as ColorTypes] ?? borderColor,
     ...getRestPropsStyle(theme, rest),
     ...rest,
   };

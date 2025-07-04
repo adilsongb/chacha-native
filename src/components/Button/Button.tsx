@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import LottieView from "lottie-react-native";
 
 import { type ButtonProps } from "./Button.types";
-import { Typograph } from "../Typography";
+import { Typography } from "../Typography";
 import { StyledView } from "../StyledView";
 import {
   Animated,
@@ -11,13 +11,15 @@ import {
 } from "react-native";
 import { useTheme } from "@/theme/context";
 import { autoAdjustColorBrightness } from "@/utils/styles";
+import { StyledViewProps } from "../StyledView/StyledView.types";
+import { TypographProps } from "../Typography/Typography.types";
 
 export const Button = ({
   title,
   onPress,
   loading = false,
   disabled = false,
-  variant = "primary",
+  variant = "default",
   animated = true,
 }: ButtonProps) => {
   const theme = useTheme();
@@ -90,9 +92,33 @@ export const Button = ({
     if (onPress) onPress();
   };
 
+  const styleVariant: { [key: string]: StyledViewProps | TypographProps } =
+    useMemo(() => {
+      if (variant === "outline") {
+        return {
+          container: {
+            bgColor: "transparent",
+            borderColor: "primary",
+            borderWidth: 2,
+          },
+          text: {
+            color: "primary",
+          },
+        };
+      }
+      return {
+        container: {
+          bgColor: disabled ? "buttonDisable" : "primary",
+        },
+        text: {
+          color: disabled ? "buttonDisableText" : "buttonText",
+        },
+      };
+    }, [variant, disabled]);
+
   return (
     <StyledView
-      bgColor={disabled ? "buttonDisable" : "primary"}
+      {...styleVariant.container}
       height={58}
       borderRadius="md"
       overflow="hidden"
@@ -132,13 +158,13 @@ export const Button = ({
             loop
           />
         ) : (
-          <Typograph
+          <Typography
+            {...styleVariant.text}
             variant="medium"
             textAlign="center"
-            color={disabled ? "buttonDisableText" : "buttonText"}
           >
             {title}
-          </Typograph>
+          </Typography>
         )}
       </StyledView>
 

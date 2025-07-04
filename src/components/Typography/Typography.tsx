@@ -9,7 +9,7 @@ import type {
   TypographVariantsTypes,
 } from "./Typography.types";
 
-export const Typograph = ({
+export const Typography = ({
   children,
   variant = "normal",
   color = "primary",

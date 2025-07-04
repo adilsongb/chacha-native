@@ -3,6 +3,6 @@ export interface ButtonProps {
   onPress: () => void;
   loading?: boolean;
   disabled?: boolean;
-  variant?: "primary" | "secondary";
+  variant?: "default" | "outline";
   animated?: boolean;
 }

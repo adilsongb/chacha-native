@@ -9,10 +9,11 @@ import type { PressableProps, ViewStyle } from "react-native";
 export type StyledViewProps = PropsWithChildren<
   {
     bgColor?: ColorTypes | (string & {});
+    borderColor?: ColorTypes | (string & {});
     borderRadius?: BorderRadiusTypes | (number & {});
     onPressOpacity?: number;
     disabled?: boolean;
-  } & Omit<ViewStyle, "borderRadius"> &
+  } & Omit<ViewStyle, "borderRadius" | "borderColor"> &
     PressableProps &
     BaseElementProps
 >;
