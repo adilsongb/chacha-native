@@ -4,4 +4,5 @@ export interface ButtonProps {
   loading?: boolean;
   disabled?: boolean;
   variant?: "primary" | "secondary";
+  animated?: boolean;
 }

@@ -4,14 +4,15 @@ import type {
   ColorTypes,
 } from "@/theme/types";
 import type { PropsWithChildren } from "react";
-import type { ViewStyle } from "react-native";
+import type { PressableProps, ViewStyle } from "react-native";
 
 export type StyledViewProps = PropsWithChildren<
   {
     bgColor?: ColorTypes | (string & {});
     borderRadius?: BorderRadiusTypes | (number & {});
-    onPress?: () => void;
+    onPressOpacity?: number;
     disabled?: boolean;
   } & Omit<ViewStyle, "borderRadius"> &
+    PressableProps &
     BaseElementProps
 >;

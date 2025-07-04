@@ -7,6 +7,10 @@ export const ThemeDefault = {
     error: "#F30F00",
     success: "#4BA449",
     warning: "#FFC107",
+    buttonText: "#FFFFFF",
+    buttonDisableText: "#F0F0F0",
+    buttonDisable: "#D3D3D3",
+    buttonLoading: "#F2F2F2",
   },
   spacing: {
     none: 0,

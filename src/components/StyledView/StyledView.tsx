@@ -7,6 +7,10 @@ import type { BorderRadiusTypes, ColorTypes } from "@/theme/types";
 export const StyledView = ({
   children,
   onPress,
+  onPressOpacity,
+  onPressIn,
+  onPressOut,
+  onLayout,
   disabled,
   bgColor,
   borderRadius,
@@ -26,8 +30,14 @@ export const StyledView = ({
     return (
       <Pressable
         onPress={onPress}
+        onPressIn={onPressIn}
+        onPressOut={onPressOut}
+        onLayout={onLayout}
         disabled={disabled}
-        style={({ pressed }) => [viewStyle, pressed && { opacity: 0.8 }]}
+        style={({ pressed }) => [
+          viewStyle,
+          pressed && { opacity: onPressOpacity ?? 0.8 },
+        ]}
       >
         {children}
       </Pressable>

@@ -29,6 +29,10 @@ export type CustomColor = {
   error: string;
   success: string;
   warning: string;
+  buttonText: string;
+  buttonDisableText: string;
+  buttonDisable: string;
+  buttonLoading: string;
   [key: string]: string;
 };
 
