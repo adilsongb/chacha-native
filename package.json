@@ -1,6 +1,6 @@
 {
   "name": "@adilsongb/chacha-native",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A visual component library for building consistent and beautiful user interfaces in React Native apps.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -35,7 +35,7 @@
   "license": "MIT",
   "homepage": "https://github.com/adilsongb/chacha-native#readme",
   "dependencies": {
-    "lottie-react-native": "^7.2.2"
+    "lottie-react-native": "7.2.4"
   },
   "devDependencies": {
     "@types/react": "~19.0.0",
