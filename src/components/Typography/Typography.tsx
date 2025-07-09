@@ -1,4 +1,4 @@
-import { getRestPropsStyle } from "@/theme/style";
+import { getRestPropsStyle } from "@/theme/styles";
 import { Text } from "react-native";
 
 import { useStyles } from "./Typography.styles";

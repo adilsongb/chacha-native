@@ -1,5 +1,5 @@
 import { Pressable, type StyleProp, View, type ViewStyle } from "react-native";
-import { getRestPropsStyle } from "@/theme/style";
+import { getRestPropsStyle } from "@/theme/styles";
 import { useTheme } from "@/theme/context";
 import type { StyledViewProps } from "./StyledView.types";
 import type { BorderRadiusTypes, ColorTypes } from "@/theme/types";
