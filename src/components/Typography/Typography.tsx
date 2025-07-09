@@ -1,3 +1,4 @@
+import React from "react";
 import { getRestPropsStyle } from "@/theme/styles";
 import { Text } from "react-native";
 

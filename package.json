@@ -1,6 +1,6 @@
 {
   "name": "@adilsongb/chacha-native",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A visual component library for building consistent and beautiful user interfaces in React Native apps.",
   "main": "build/index.js",
   "types": "build/index.d.ts",

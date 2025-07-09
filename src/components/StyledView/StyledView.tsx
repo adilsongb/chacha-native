@@ -1,3 +1,4 @@
+import React from "react";
 import { Pressable, type StyleProp, View, type ViewStyle } from "react-native";
 import { getRestPropsStyle } from "@/theme/styles";
 import { useTheme } from "@/theme/context";
